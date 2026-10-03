@@ -1,0 +1,304 @@
+%-------------------------
+% Resume in LaTeX
+% Layout from: https://github.com/zeyu2001/cv (based on https://github.com/sb2nov/resume)
+% License : MIT
+%
+% HOW TO EDIT: change the text below on GitHub (pencil icon) and commit.
+% GitHub Actions rebuilds cv.pdf automatically about a minute later.
+% Text inside { } is what appears on the page; leave the \commands alone.
+%------------------------
+
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{accsupp}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\link}[2]{\href{#1}{\color{blue}\underline{#2}}}
+\newcommand{\ord}[2]{#1\textsuperscript{#2}} % e.g. \ord{1}{st} -> 1st
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newenvironment{resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}{\end{itemize}}
+\newenvironment{resumeItemList}{\begin{itemize}}{\end{itemize}}
+\newenvironment{resumeItemSubList}{\begin{itemize}\setlength\itemsep{0.4em}}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\awardsTable}[1]{
+	\begin{tabularx}{\textwidth}{llllll}
+	\emph{Name}	& \emph{Placing}	& \emph{Type}	& \emph{Scope}	& \emph{Awarder}                 & \emph{Year}       \\
+	\midrule\midrule
+	#1
+	\end{tabularx}
+}
+\newcommand{\awardsTableRow}[6]{
+	\BeginAccSupp{method=plain, ActualText=11\string\t 21}#1 & #2 & #3 & #4 & #5 & #6\EndAccSupp{} \\
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+  \textbf{\huge \scshape Surya Ravi} \\ \vspace{1pt}
+  \small Email: \link{mailto:suryaravi.in@gmail.com}{suryaravi.in@gmail.com} $|$
+  Phone: +91-7708517014 $|$
+  Location: Pune, India \\
+  LinkedIn: \link{https://www.linkedin.com/in/4yru5/}{Surya Ravi} $|$
+  GitHub: \link{https://github.com/4yru5}{4yru5} $|$
+  Medium: \link{https://medium.com/@suryaravi.in}{4yru5}
+\end{center}
+
+\section{Education}
+\begin{resumeSubHeadingList}
+  \resumeSubheading
+    {Kingston University}{Sep. 2023 -- Sep. 2024}
+    {Master's Degree in Computer Animation (School of Computer Science \& Mathematics)}{London, United Kingdom}
+    \begin{resumeItemList}
+      \resumeItem{\textbf{Award: Distinction.}}
+    \end{resumeItemList}
+
+  \resumeSubheading
+    {Kumaraguru College of Technology}{Aug. 2019 -- May 2023}
+    {Bachelor's in Mechatronics Engineering (Affiliated to Anna University, Chennai)}{Coimbatore, Tamil Nadu}
+    \begin{resumeItemList}
+      \resumeItem{\textbf{GPA: 8.8 / 10.}}
+    \end{resumeItemList}
+
+  \resumeSubheading
+    {PVV Hr. Sec. School}{Apr. 2017 -- Apr. 2019}
+    {HSC \& SSLC}{Coimbatore, Tamil Nadu}
+    \begin{resumeItemList}
+      \resumeItem{\textbf{HSC} (Apr. 2019): 91.4\% $\cdot$ \textbf{SSLC} (Apr. 2017): 94.8\%}
+    \end{resumeItemList}
+\end{resumeSubHeadingList}
+
+\section{Experience}
+\begin{resumeSubHeadingList}
+
+  \resumeSubheading
+    {Orbia}{Dec. 2025 -- Present}
+    {Senior Analyst -- Threat Exposure Management}{Pune, Maharashtra}
+    \begin{resumeItemList}
+      \resumeItem{Designed, developed and currently maintain 18 end-to-end
+                  automations using Tines SOAR covering threat monitoring, alert
+                  triage, vulnerability management workflows and false positive
+                  reclassification, improving response efficiency, decreasing
+                  manual work hours and reducing the number of false positive
+                  reports.}
+      \resumeItem{Validated comprehensive penetration testing reports, triaging
+                  bugs and ensuring accurate documentation of vulnerabilities,
+                  proof-of-concepts, and remediation recommendations in
+                  Intigriti and HackerOne.}
+      \resumeItem{Developed 3 CrowdStrike Falcon Fusion SOAR workflows to
+                  automate security response and remediation actions, enabling
+                  faster investigations, decision-making and endpoint response
+                  while reducing manual analyst intervention.}
+      \resumeItem{Executed 2 white-box penetration tests on internal web
+                  applications, identifying security gaps and collaborating with
+                  engineering teams for remediation.}
+      \resumeItem{Developed and optimized security orchestration workflows
+                  integrating CrowdStrike, Tenable, ServiceNow, Assetnote and
+                  Proofpoint to prioritize vulnerabilities in endpoints and
+                  application environments.}
+      \resumeItem{Built API-driven security automation workflows using REST
+                  APIs, Postman, JSON and Python, enabling integration and
+                  processing of security data across disparate security
+                  platforms.}
+      \resumeItem{Managed the end-to-end vulnerability lifecycle, from
+                  identification and risk assessment through remediation
+                  tracking, validation/retesting, stakeholder coordination, and
+                  compliance reporting.}
+      \resumeItem{Performed remediation validation and retesting to verify
+                  successful patch implementation and confirm vulnerability
+                  resolution in 8 internal applications.}
+    \end{resumeItemList}
+    \vspace{2pt}
+
+  \resumeSubheading
+    {Hackup Technology}{Aug. 2025 -- Nov. 2025}
+    {Cybersecurity Analyst Intern}{Coimbatore, Tamil Nadu}
+    \begin{resumeItemList}
+      \resumeItem{Conducted hands-on web application security testing using
+                  Burp Suite, analyzing application behavior, identifying
+                  security weaknesses, and developing practical understanding of
+                  vulnerability discovery and validation.}
+      \resumeItem{Performed network traffic analysis using Wireshark, examining
+                  protocols, packet flows, and network communications to
+                  strengthen understanding of security monitoring and detection
+                  of anomalous activity.}
+      \resumeItem{Gained practical exposure to SOC operations, threat
+                  monitoring, vulnerability management, and security
+                  assessments, developing foundational experience in
+                  identifying, analyzing, and responding to security issues.}
+      \resumeItem{Delivered technical seminars across 3 colleges covering Linux
+                  fundamentals, command-line operations, and cybersecurity
+                  concepts, translating technical security topics into
+                  practical guidance for students.}
+      \resumeItem{Participated in Capture The Flag (CTF) challenges involving
+                  web security, cryptography, OSINT and reverse engineering,
+                  strengthening hands-on problem-solving, vulnerability
+                  analysis, and investigative thinking.}
+      \resumeItem{Developed practical knowledge of web application
+                  vulnerabilities aligned with PortSwigger Web Security
+                  Academy, including SQL Injection, IDOR, API security flaws,
+                  NoSQL Injection, Reflected and Stored Cross-Site Scripting,
+                  Authentication and Access Control issues, and other
+                  OWASP-aligned vulnerabilities, with hands-on focus on
+                  exploitation, validation, and remediation techniques.}
+    \end{resumeItemList}
+\end{resumeSubHeadingList}
+
+%-----------PROJECTS-----------
+\section{Projects}
+\begin{resumeSubHeadingList}
+
+  \resumeProjectHeading{\textbf{Recon to Response}}{}
+  \begin{resumeItemList}
+    \resumeItem{Built security automation workflows integrating multiple
+                security tools to automate reconnaissance, alert enrichment,
+                triage, and incident-response activities.}
+    \resumeItem{Designed reusable workflows to reduce manual SOC operations
+                and improve consistency across security-response processes.}
+  \end{resumeItemList}
+
+  \resumeProjectHeading{\textbf{Prompt Pattern Index}}{}
+  \begin{resumeItemList}
+    \resumeItem{AI security research tool for analyzing prompt-injection
+                patterns and generating security assessments, applying
+                structured classification, risk scoring, and evidence-driven
+                analysis to LLM security threats.}
+  \end{resumeItemList}
+
+  \resumeProjectHeading{\textbf{SurfaceMap -- Attack Surface Management}}{}
+  \begin{resumeItemList}
+    \resumeItem{Security automation for mapping and analyzing exposed attack
+                surfaces, correlating assets and security findings to improve
+                vulnerability visibility and prioritize externally reachable
+                risks.}
+  \end{resumeItemList}
+
+  \resumeProjectHeading{\textbf{Security Threat Modeling}}{In progress}
+  \begin{resumeItemList}
+    \resumeItem{Automated security threat-modeling platform that combines SAST,
+                DAST, dependency analysis, and application attack-surface
+                mapping to identify, correlate, and prioritize security threats
+                across source code and running applications.}
+  \end{resumeItemList}
+
+\end{resumeSubHeadingList}
+
+\section{Professional Highlights}
+\begin{resumeSubHeadingList}
+
+  \resumeProjectHeading{\textbf{Security Research \& Write-ups}}{}
+  \begin{resumeItemList}
+    \resumeItem{\emph{Alice LLM Security} -- LLM-focused security research
+                through prompt injection, instruction-hierarchy manipulation,
+                adversarial prompting, model steering, and output-format
+                coercion while solving an AI security CTF. Awarded Best
+                Technical Write-up.
+                \link{https://medium.com/engineering-activefence/alice-in-wonderland-prompt-based-ctf-ai-security-challenge-b6af4b6de75e}{Read}}
+    \resumeItem{\emph{QKD} -- Research on Quantum Key Distribution and its
+                cryptographic foundations, exploring quantum principles, secure
+                key exchange, eavesdropping detection, and the role of QKD in
+                post-quantum cybersecurity.
+                \link{https://medium.com/@suryaravi.in/qkd-quantum-key-distribution-cb1b954d52e8}{Read}}
+  \end{resumeItemList}
+
+\end{resumeSubHeadingList}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        \textbf{Primary Skills}{: SOAR $\cdot$ Incident Response $\cdot$ MITRE ATT\&CK $\cdot$ Threat Intelligence $\cdot$ API Security $\cdot$ OWASP Top 10 $\cdot$ Cryptography $\cdot$ Vulnerability Management $\cdot$ Python $\cdot$ PowerShell $\cdot$ C} \\
+        \textbf{Secondary Skills}{: Bash $\cdot$ Linux $\cdot$ Penetration Testing $\cdot$ Quantum Cryptography $\cdot$ CI/CD $\cdot$ LLM Security $\cdot$ Adversarial Testing $\cdot$ API Integration $\cdot$ SQL} \\
+        \textbf{Stack}{: Tines $\cdot$ n8n $\cdot$ Burp Suite $\cdot$ CrowdStrike $\cdot$ Tenable $\cdot$ Assetnote $\cdot$ Postman $\cdot$ LangGraph $\cdot$ Git $\cdot$ GitHub $\cdot$ Wireshark $\cdot$ VS~Code} \\
+        \textbf{Certifications}{: Google Cybersecurity Professional Certificate (GCPC) $\cdot$ Certified Postman API Developer Associate $\cdot$ CrowdStrike SIEM 108: Fusion SOAR in Falcon Next-Gen SIEM $\cdot$ CrowdStrike SOAR 100: Falcon Fusion SOAR $\cdot$ Tines Automation Certified Professional $\cdot$ n8n Automation Certified Professional $\cdot$ API Security Fundamentals $\cdot$ OWASP Security Top 10 $\cdot$ Fortinet NSE 1--3 Cybersecurity $\cdot$ Hugging Face AI Agents Course} \\
+        \textbf{Soft Skills}{: Problem Solving $\cdot$ Adaptability $\cdot$ Fast-paced Learning $\cdot$ Cross-functional Collaboration $\cdot$ Composure Under Pressure} \\
+        \textbf{Interests}{: Guitar $\cdot$ Surfing $\cdot$ Sudoku \& Rubik's Cubes $\cdot$ Chess $\cdot$ Reading}
+        }}
+\end{itemize}
+
+\section{Honours \& Awards}
+\setlength{\tabcolsep}{6.0pt}
+\renewcommand{\arraystretch}{1.1}
+\fontsize{8.5}{11}\selectfont
+\awardsTable{
+  \awardsTableRow{Alice in Wonderland LLM CTF}{Top 5, Best Write-up}{AI Security CTF}{Global}{-}{2026}
+  \awardsTableRow{Kriya CTF (Jeopardy)}{\ord{1}{st} Place}{Security CTF}{IN}{PSG Institute of Technology}{2020} \hline
+  \awardsTableRow{IISF Hackathon}{\ord{1}{st} Place}{Hackathon}{IN}{Ministry of Sci. \& Tech.}{2020}
+  \awardsTableRow{Robo Sumo}{\ord{1}{st} Place}{Robotics}{IN}{PSG Institute of Technology}{2021} \hline
+  \awardsTableRow{Outstanding Student Award}{-}{Academic Award}{IN}{Kumaraguru College of Tech.}{2023}
+  \awardsTableRow{Certificate of Recognition}{Academic Merit}{Academic Award}{IN}{Kumaraguru College of Tech.}{2023}
+  \awardsTableRow{Mahatma Gandhi Merit Scholarship}{Top 10\% of Institution}{Scholarship}{IN}{Kumaraguru College of Tech.}{2019}
+}
+
+% Optional: uncomment if an employer asks for a declaration
+% \vspace{10pt}
+% \normalsize
+% \section{Declaration}
+% \small I, Surya Ravi, hereby confirm that the information given above is true to the best of my knowledge.
+
+\end{document}
