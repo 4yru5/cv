@@ -21,3 +21,7 @@ My CV in LaTeX. GitHub Actions rebuilds the PDF and the web version automaticall
 - A new bullet point is a copy of an existing `\resumeItem{...}` line.
 - If a build fails (red ✗ in the Actions tab), open the run to see the error,
   fix `cv.tex` and commit again. The previous `cv.pdf` stays in place until a build succeeds.
+
+## License
+
+[MIT](LICENSE). Layout based on [zeyu2001/cv](https://github.com/zeyu2001/cv) and [sb2nov/resume](https://github.com/sb2nov/resume), both MIT.
