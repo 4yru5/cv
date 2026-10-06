@@ -6,7 +6,7 @@
 % HOW TO EDIT: change the text below on GitHub (pencil icon) and commit.
 % GitHub Actions rebuilds cv.pdf automatically about a minute later.
 % Text inside { } is what appears on the page; leave the \commands alone.
-%------------------------
+%-------------------------
 
 \documentclass[a4paper,10pt]{article}
 
@@ -95,15 +95,15 @@
 \newenvironment{resumeItemSubList}{\begin{itemize}\setlength\itemsep{0.4em}}{\end{itemize}\vspace{-5pt}}
 
 \newcommand{\awardsTable}[1]{
-	\begin{tabularx}{\textwidth}{l>{\raggedright\arraybackslash}Xllll}
-	\emph{Name}	& \emph{Placing}	& \emph{Type}	& \emph{Scope}	& \emph{Awarder}                 & \emph{Year}       \\
-	\midrule\midrule
-	#1
-	\end{tabularx}
-}
+ \begin{tabularx}{\textwidth}{l>{\raggedright\arraybackslash}Xllll}
+ \emph{Name}	& \emph{Placing}	& \emph{Type}	& \emph{Scope}	& \emph{Awarder}                 & \emph{Year}       \\
+ \midrule\midrule
+ #1
+ \end{tabularx}
+ }
 \newcommand{\awardsTableRow}[6]{
-	\BeginAccSupp{method=plain, ActualText=11\string\t 21}#1 & #2 & #3 & #4 & #5 & #6\EndAccSupp{} \\
-}
+ \BeginAccSupp{method=plain, ActualText=11\string\t 21}#1 & #2 & #3 & #4 & #5 & #6\EndAccSupp{} \\
+ }
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -142,37 +142,37 @@
     {Senior Analyst -- Threat Exposure Management}{Pune, Maharashtra}
     \begin{resumeItemList}
       \resumeItem{Designed, developed and currently maintain \textbf{18} end-to-end
-                  automations using \textbf{Tines SOAR} covering threat monitoring, alert
-                  triage, vulnerability management workflows and false positive
-                  reclassification, improving response efficiency, decreasing
-                  manual work hours and reducing the number of false positive
-                  reports.}
+                   automations using \textbf{Tines SOAR} covering threat monitoring, alert
+                   triage, vulnerability management workflows and false positive
+                   reclassification, improving response efficiency, decreasing
+                   manual work hours and reducing the number of false positive
+                   reports.}
       \resumeItem{Validated comprehensive penetration testing reports, triaging
-                  bugs and ensuring accurate documentation of vulnerabilities,
-                  proof-of-concepts, and remediation recommendations in
-                  \textbf{Intigriti} and \textbf{HackerOne}.}
+                   bugs and ensuring accurate documentation of vulnerabilities,
+                   proof-of-concepts, and remediation recommendations in
+                   \textbf{Intigriti} and \textbf{HackerOne}.}
       \resumeItem{Developed \textbf{5} \textbf{CrowdStrike Falcon Fusion SOAR} workflows to
-                  automate security response and remediation actions, enabling
-                  faster investigations, decision-making and endpoint response
-                  while reducing manual analyst intervention.}
+                   automate security response and remediation actions, enabling
+                   faster investigations, decision-making and endpoint response
+                   while reducing manual analyst intervention.}
       \resumeItem{Executed \textbf{2} white-box penetration tests on internal web
-                  applications, identifying security gaps and collaborating with
-                  engineering teams for remediation.}
+                   applications, identifying security gaps and collaborating with
+                   engineering teams for remediation.}
       \resumeItem{Developed and optimized security orchestration workflows
-                  integrating \textbf{CrowdStrike}, \textbf{Tenable}, \textbf{ServiceNow}, \textbf{Assetnote} and
-                  \textbf{Proofpoint} to prioritize vulnerabilities in endpoints and
-                  application environments.}
+                   integrating \textbf{CrowdStrike}, \textbf{Tenable}, \textbf{ServiceNow}, \textbf{Assetnote} and
+                   \textbf{Proofpoint} to prioritize vulnerabilities in endpoints and
+                   application environments.}
       \resumeItem{Built API-driven security automation workflows using \textbf{REST
-                  APIs}, \textbf{Postman}, \textbf{JSON} and \textbf{Python}, enabling integration and
-                  processing of security data across disparate security
-                  platforms.}
+                   APIs}, \textbf{Postman}, \textbf{JSON} and \textbf{Python}, enabling integration and
+                   processing of security data across disparate security
+                   platforms.}
       \resumeItem{Managed the end-to-end vulnerability lifecycle, from
-                  identification and risk assessment through remediation
-                  tracking, validation/retesting, stakeholder coordination, and
-                  compliance reporting.}
+                   identification and risk assessment through remediation
+                   tracking, validation/retesting, stakeholder coordination, and
+                   compliance reporting.}
       \resumeItem{Performed remediation validation and retesting to verify
-                  successful patch implementation and confirm vulnerability
-                  resolution in \textbf{8} internal applications.}
+                   successful patch implementation and confirm vulnerability
+                   resolution in \textbf{8} internal applications.}
     \end{resumeItemList}
     \vspace{2pt}
 
@@ -181,16 +181,16 @@
     {AI Red Team Researcher -- Freelance}{Remote}
     \begin{resumeItemList}
       \resumeItem{Conducted \textbf{AI red-team and adversarial security testing using
-                  Alice}, developing attack scenarios to evaluate model behavior,
-                  prompt-injection resistance, guardrails, and security
-                  boundaries.}
+                   Alice}, developing attack scenarios to evaluate model behavior,
+                   prompt-injection resistance, guardrails, and security
+                   boundaries.}
       \resumeItem{Built and iterated on \textbf{automated security-testing harnesses} for
-                  adversarial prompt execution, response capture,
-                  reproducibility, and regression testing across attack
-                  scenarios.}
+                   adversarial prompt execution, response capture,
+                   reproducibility, and regression testing across attack
+                   scenarios.}
       \resumeItem{Identified and validated \textbf{guardrail bypasses and unintended model
-                  behaviors}, documenting reproducible attack paths, security
-                  impact, and defensive improvements.}
+                   behaviors}, documenting reproducible attack paths, security
+                   impact, and defensive improvements.}
     \end{resumeItemList}
     \vspace{2pt}
 
@@ -199,12 +199,12 @@
     {Bug Bounty Hunter}{Remote}
     \begin{resumeItemList}
       \resumeItem{Hunted for web and API vulnerabilities in public \textbf{HackerOne}
-                  programs, focusing on access control, authentication, rate
-                  limiting and exposed staging infrastructure.}
-      \resumeItem{Reported \textbf{8} High vulnerabilities and \textbf{3} Medium vulnerabilities with auth, API and injection vulnerabilities, documenting reproduction steps, explaining security impact and remediation guidance.}
+                   programs, focusing on access control, authentication, rate
+                   limiting and exposed staging infrastructure.}
+      \resumeItem{Reported \textbf{8} High vulnerabilities and \textbf{3} Medium vulnerabilities with auth, API and injection vulnerabilities, documenting reproduction steps, explaining security impact, and summarizing remediation recommendations.}
       \resumeItem{Used \textbf{Burp Suite} for DAST and developed automated pipelines for SAST reconnaissance, request tampering and
-                  validation of findings, staying within program scope and
-                  disclosure rules.}
+                   validation of findings, staying within program scope and
+                   disclosure rules.}
     \end{resumeItemList}
     \vspace{2pt}
 
@@ -213,28 +213,28 @@
     {Cybersecurity Analyst Intern}{Coimbatore, Tamil Nadu}
     \begin{resumeItemList}
       \resumeItem{Conducted hands-on web application security testing using
-                  \textbf{Burp Suite}, analyzing application behavior, identifying
-                  security weaknesses, and developing practical understanding of
-                  vulnerability discovery and validation.}
+                   \textbf{Burp Suite}, analyzing application behavior, identifying
+                   security weaknesses, and developing practical understanding of
+                   vulnerability discovery and validation.}
       \resumeItem{Performed network traffic analysis using \textbf{Wireshark}, examining
-                  protocols, packet flows, and network communications to
-                  strengthen understanding of security monitoring and detection
-                  of anomalous activity.}
+                   protocols, packet flows, and network communications to
+                   strengthen understanding of security monitoring and detection
+                   of anomalous activity.}
       \resumeItem{Gained practical exposure to SOC operations, threat
-                  monitoring, vulnerability management, and security
-                  assessments, developing foundational experience in
-                  identifying, analyzing, and responding to security issues.}
+                   monitoring, vulnerability management, and security
+                   assessments, developing foundational experience in
+                   identifying, analyzing, and responding to security issues.}
       \resumeItem{Delivered technical seminars across \textbf{3} colleges covering \textbf{Linux}
-                  fundamentals, command-line operations, and cybersecurity
-                  concepts, translating technical security topics into
-                  practical guidance for students.}
+                   fundamentals, command-line operations, and cybersecurity
+                   concepts, translating technical security topics into
+                   practical guidance for students.}
       \resumeItem{Developed practical knowledge of web application
-                  vulnerabilities aligned with \textbf{PortSwigger Web Security
-                  Academy}, including SQL Injection, IDOR, API security flaws,
-                  NoSQL Injection, Reflected and Stored Cross-Site Scripting,
-                  Authentication and Access Control issues, and other
-                  OWASP-aligned vulnerabilities, with hands-on focus on
-                  exploitation, validation, and remediation techniques.}
+                   vulnerabilities aligned with \textbf{PortSwigger Web Security
+                   Academy}, including SQL Injection, IDOR, API security flaws,
+                   NoSQL Injection, Reflected and Stored Cross-Site Scripting,
+                   Authentication and Access Control issues, and other
+                   OWASP-aligned vulnerabilities, with hands-on focus on
+                   exploitation, validation, and remediation techniques.}
     \end{resumeItemList}
 \end{resumeSubHeadingList}
 
@@ -245,35 +245,35 @@
   \resumeProjectHeading{\textbf{arc-ai} -- PoC-generating security agent}{}
   \begin{resumeItemList}
     \resumeItem{LangGraph + Temporal agent that finds vulnerabilities from
-                source, proves each with a working exploit in an egress-locked
-                sandbox and reports only verified findings; proves 3/3 planted
-                vulnerabilities (SQLi, SSRF, IDOR) and discards unprovable
-                hypotheses, for zero unverified alerts.}
+                 source, proves each with a working exploit in an egress-locked
+                 sandbox and reports only verified findings; proves 3/3 planted
+                 vulnerabilities (SQLi, SSRF, IDOR) and discards unprovable
+                 hypotheses, for zero unverified alerts.}
   \end{resumeItemList}
 
   \resumeProjectHeading{\textbf{taintline} -- Static taint analyzer}{}
   \begin{resumeItemList}
     \resumeItem{Go + tree-sitter analyzer tracing user input to SQL injection,
-                command injection and path-traversal sinks in Python and
-                JavaScript, with SARIF output for GitHub Code Scanning; detects
-                9/9 seeded flaws with 0 false positives on safe twins, backed
-                by 42 engine edge-case tests.}
+                 command injection and path-traversal sinks in Python and
+                 JavaScript, with SARIF output for GitHub Code Scanning; detects
+                 9/9 seeded flaws with 0 false positives on safe twins, backed
+                 by 42 engine edge-case tests.}
   \end{resumeItemList}
 
   \resumeProjectHeading{\textbf{PPx} -- Prompt Pattern Index}{}
   \begin{resumeItemList}
     \resumeItem{LangGraph pipeline that classifies prompts across 4
-                prompt-injection pattern families (prompt extraction,
-                instruction override, data exposure, malicious patterns) and
-                produces a risk score, severity rating and security report.}
+                 prompt-injection pattern families (prompt extraction,
+                 instruction override, data exposure, malicious patterns) and
+                 produces a risk score, severity rating and security report.}
   \end{resumeItemList}
 
   \resumeProjectHeading{\textbf{Attack Surface Mapper}}{}
   \begin{resumeItemList}
     \resumeItem{Application-understanding engine that maps a codebase in 4
-                discovery stages (framework, routes, authentication, external
-                services) before vulnerability hunting; surfaced 37 routes, 4
-                admin routes and 2 external services on a sample Express app.}
+                 discovery stages (framework, routes, authentication, external
+                 services) before vulnerability hunting; surfaced 37 routes, 4
+                 admin routes and 2 external services on a sample Express app.}
   \end{resumeItemList}
 
 \end{resumeSubHeadingList}
@@ -283,16 +283,16 @@
   \item[]
   \begin{resumeItemList}
     \resumeItem{\emph{Alice LLM Security} -- LLM-focused security research
-                through prompt injection, instruction-hierarchy manipulation,
-                adversarial prompting, model steering, and output-format
-                coercion while solving an AI security CTF. Awarded Best
-                Technical Write-up.
-                \link{https://medium.com/engineering-activefence/alice-in-wonderland-prompt-based-ctf-ai-security-challenge-b6af4b6de75e}{Read}}
+                 through prompt injection, instruction-hierarchy manipulation,
+                 adversarial prompting, model steering, and output-format
+                 coercion while solving an AI security CTF. Awarded Best
+                 Technical Write-up.
+                 \link{https://medium.com/engineering-activefence/alice-in-wonderland-prompt-based-ctf-ai-security-challenge-b6af4b6de75e}{Read}}
     \resumeItem{\emph{QKD} -- Research on Quantum Key Distribution and its
-                cryptographic foundations, exploring quantum principles, secure
-                key exchange, eavesdropping detection, and the role of QKD in
-                post-quantum cybersecurity.
-                \link{https://medium.com/@suryaravi.in/qkd-quantum-key-distribution-cb1b954d52e8}{Read}}
+                 cryptographic foundations, exploring quantum principles, secure
+                 key exchange, eavesdropping detection, and the role of QKD in
+                 post-quantum cybersecurity.
+                 \link{https://medium.com/@suryaravi.in/qkd-quantum-key-distribution-cb1b954d52e8}{Read}}
   \end{resumeItemList}
 \end{resumeSubHeadingList}
 
@@ -304,7 +304,7 @@
         \textbf{Stack}{: Tines, Burp Suite, LangGraph, Postman, Git, GitHub, VS~Code and Docker} \\
         \textbf{Certifications}{: GCPC, Tines Certified Professional, Postman API Developer Associate, CrowdStrike Falcon Fusion SOAR and LangGraph Foundations} \\
         \textbf{Soft Skills}{: Problem-Solving, Fast-paced Learning and Cross-functional collaboration} \\
-        \textbf{Hobbies}{: Guitar, Surfing, solving Rubik's Cube & Sudoku, Chess and Reading}
+        \textbf{Hobbies}{: Guitar, Surfing, solving Rubik's Cube \& Sudoku, Chess and Reading}
         }}
 \end{itemize}
 
@@ -320,7 +320,7 @@
   \awardsTableRow{Outstanding Student Award}{Academic \& Inter-College Event Excellence}{Academic Award}{IN}{Kumaraguru College of Tech.}{2023}
   \awardsTableRow{Certificate of Recognition}{Academic Merit}{Academic Award}{IN}{Kumaraguru College of Tech.}{2023}
   \awardsTableRow{Mahatma Gandhi Merit Scholarship}{Top 10\% of Institution}{Scholarship}{IN}{Kumaraguru College of Tech.}{2019, 2020}
-}
+ }
 
 % Optional: uncomment if an employer asks for a declaration
 % \vspace{10pt}
