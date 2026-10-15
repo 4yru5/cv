@@ -54,7 +54,7 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\link}[2]{\href{#1}{\color{blue}\underline{#2}}}
+\newcommand{\link}[2]{\href{#1}{\color{blue}#2}}
 \newcommand{\ord}[2]{#1\textsuperscript{#2}} % e.g. \ord{1}{st} -> 1st
 
 \newcommand{\resumeItem}[1]{
@@ -68,7 +68,7 @@
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-7pt}
+  \end{tabular*}\vspace{-3pt}
 }
 
 % Like \resumeSubheading, plus a plain third line (e.g. award or GPA)
@@ -97,10 +97,12 @@
 \newcommand{\awardsTable}[1]{
  \begin{tabularx}{\textwidth}{l>{\raggedright\arraybackslash}Xllll}
  \emph{Name}	& \emph{Placing}	& \emph{Type}	& \emph{Scope}	& \emph{Awarder}                 & \emph{Year}       \\
- \midrule\midrule
+ \midrule
  #1
  \end{tabularx}
  }
+% Drops a cell one line so it sits level with the middle of a 3-line Placing cell
+\newcommand{\midcell}[1]{\raisebox{-11pt}[0pt][0pt]{#1}}
 \newcommand{\awardsTableRow}[6]{
  \BeginAccSupp{method=plain, ActualText=11\string\t 21}#1 & #2 & #3 & #4 & #5 & #6\EndAccSupp{} \\
  }
@@ -111,55 +113,88 @@
 \begin{document}
 
 \begin{center}
-  \textbf{\huge \scshape Surya Ravi} \\ \vspace{1pt}
+  \textbf{\huge \scshape Surya Ravi} \\ \vspace{6pt}
   \small Email: \link{mailto:suryaravi.in@gmail.com}{suryaravi.in@gmail.com} $|$
   LinkedIn: \link{https://www.linkedin.com/in/4yru5/}{Surya Ravi} $|$
   GitHub: \link{https://github.com/4yru5}{4yru5} $|$
-  Mobile: \link{tel:+917708517014}{+91 7708517014}
+  Mobile: +91 7708517014
 \end{center}
 
-\section{About me}
-\small{Engineer with cross-domain expertise in cybersecurity, computer science, AI, and system design. Experienced in threat exposure management, SOAR automation, vulnerability research, bug bounty hunting, and AI red teaming. Focused on building intelligent security tooling that combines static analysis, agentic AI, and rigorous validation to deliver actionable, researched-backed findings. Driven by continuous learning and a commitment to exploring emerging technologies, deepening technical expertise, and translating new knowledge into practical engineering solutions.}
+\section{About Me}
+\small{Engineer with cross-domain knowledge spanning cybersecurity, computer
+science, AI and system design. Experienced in building event-driven automation
+flows and AI systems for threat exposure management, SOAR automation and
+vulnerability management, and exploit-verified
+security tooling with static analysis and LLM agents.}
 
 \section{Experience}
 \begin{resumeSubHeadingList}
 
   \resumeSubheading
-    {Orbia}{Dec. 2025 -- Present}
-    {Senior Analyst -- Threat Exposure Management}{Pune, Maharashtra}
+    {Orbia}{Jul. 2026 -- Present}
+    {Threat Exposure Management Analyst}{Pune, Maharashtra}
     \begin{resumeItemList}
-      \resumeItem{Designed, developed and currently maintain \textbf{18} end-to-end
-                   automations using \textbf{Tines SOAR} covering threat monitoring, alert
-                   triage, vulnerability management workflows and false positive
-                   reclassification, improving response efficiency, decreasing
-                   manual work hours and reducing the number of false positive
-                   reports.}
-      \resumeItem{Validated comprehensive penetration testing reports, triaging
-                   bugs and ensuring accurate documentation of vulnerabilities,
-                   proof-of-concepts, and remediation recommendations in
-                   \textbf{Intigriti} and \textbf{HackerOne}.}
-      \resumeItem{Developed \textbf{5} \textbf{CrowdStrike Falcon Fusion SOAR} workflows to
-                   automate security response and remediation actions, enabling
-                   faster investigations, decision-making and endpoint response
-                   while reducing manual analyst intervention.}
-      \resumeItem{Executed \textbf{2} white-box penetration tests on internal web
-                   applications, identifying security gaps and collaborating with
-                   engineering teams for remediation.}
-      \resumeItem{Developed and optimized security orchestration workflows
-                   integrating \textbf{CrowdStrike}, \textbf{Tenable}, \textbf{ServiceNow}, \textbf{Assetnote} and
-                   \textbf{Proofpoint} to prioritize vulnerabilities in endpoints and
-                   application environments.}
-      \resumeItem{Built API-driven security automation workflows using \textbf{REST
-                   APIs}, \textbf{Postman}, \textbf{JSON} and \textbf{Python}, enabling integration and
-                   processing of security data across disparate security
-                   platforms.}
-      \resumeItem{Managed the end-to-end vulnerability lifecycle, from
-                   identification and risk assessment through remediation
-                   tracking, validation/retesting, stakeholder coordination, and
-                   compliance reporting.}
-      \resumeItem{Performed remediation validation and retesting to verify
-                   successful patch implementation and confirm vulnerability
-                   resolution in \textbf{8} internal applications.}
+      \resumeItem{Built an event-driven \textbf{zero-day and N-day} pipeline in \textbf{Tines}
+                   using \textbf{webhooks} and \textbf{HTTP Request} actions that ingests critical vulnerabilities from \textbf{Assetnote} and \textbf{CrowdStrike}
+                   on internet-facing domains, subdomains, IPs and cloud assets,
+                   alerts owners through \textbf{Outlook} and \textbf{Microsoft Teams}, and raises \textbf{ServiceNow} tickets for the responsible assignment group,
+                   cutting time to remediation.}
+      \resumeItem{Integrated \textbf{CrowdStrike Falcon Fusion SOAR} with \textbf{Tines} to detect cloud
+                   misconfiguration drift, alerting the team on critical
+                   \textbf{Indicators of Misconfiguration (IOMs)} and documenting and
+                   tracking remediation in \textbf{ServiceNow}; developed
+                   \textbf{5} Falcon Fusion workflows for automated response and
+                   remediation.}
+      \resumeItem{Engineered a \textbf{false positive reduction engine} with the \textbf{Netskope}
+                   team that re-filters malicious alerts so only true positives
+                   reach analysts, allowlisting validated activity per business
+                   domain.}
+      \resumeItem{Built firewall control-failure monitoring integrating \textbf{Netskope}, \textbf{FortiGate} and
+                   \textbf{Palo Alto Panorama} to detect missing \textbf{GRE} and \textbf{IPsec} tunnels to
+                   Netskope PoPs by geographic region and raise \textbf{ServiceNow}
+                   tickets.}
+      \resumeItem{Automated monthly \textbf{Proofpoint} and \textbf{Splunk} email-threat reporting on
+                   phishing, impostor, malicious, duplicate and other mail.}
+      \resumeItem{Built a \textbf{GitHub} pull-request automation with a stateful \textbf{LangGraph}
+                   agent that parses PR diffs, flags malicious code for review and
+                   stores reviewed verdicts in long-term memory to keep improving.}
+      \resumeItem{Built databases and dashboards in \textbf{Tines}, backed by a relational
+                   \textbf{SQL} database, to retain automation data for
+                   future reference and visualise daily and monthly metrics for
+                   \textbf{compliance and audit}.}
+      \resumeItem{Own quarterly \textbf{SAP} and \textbf{internet-facing} penetration tests on
+                   \textbf{Intigriti} end to end, from cleaning scope and clearing backlog
+                   vulnerabilities to closing reports with the \textbf{GRC} team,
+                   performing retests to validate patches and variant analysis, and
+                   reporting to business-group owners and stakeholders.}
+      \resumeItem{Executed \textbf{2} white-box pentests on internal web apps and validated
+                   remediation by retesting \textbf{8} internal applications.}
+      \resumeItem{Mentored interns and juniors on building and handling automations;
+                   wrote \textbf{runbooks} and \textbf{SOPs} for the workflows.}
+    \end{resumeItemList}
+    \vspace{2pt}
+
+  \resumeSubheading
+    {Dura-Line (Orbia)}{Dec. 2025 -- Jun. 2026}
+    {Security Analyst Intern}{Remote}
+    \begin{resumeItemList}
+      \resumeItem{Designed, developed and maintained end-to-end
+                   automations in \textbf{Tines SOAR} covering threat monitoring, alert
+                   triage, vulnerability management and false positive
+                   reclassification, built on \textbf{REST APIs}, \textbf{JSON} and \textbf{Python}.}
+      \resumeItem{Built Tines automations across identity and authentication
+                   schemes, including \textbf{Basic auth}, \textbf{API keys}, \textbf{JWT} and \textbf{OAuth 2.0},
+                   to integrate securely with security platforms.}
+      \resumeItem{Triaged bug bounty and penetration testing reports in
+                   \textbf{Intigriti}, validating vulnerabilities, proof-of-concepts and
+                   remediation recommendations.}
+      \resumeItem{Ramped up quickly on the enterprise security stack, moving from
+                   onboarding to building production automations.}
+      \resumeItem{Took ownership of \textbf{Assetnote} and \textbf{Tenable}, continuously
+                   monitoring scanner sensor and agent health, running weekly
+                   vulnerability scans and documenting findings.}
+      \resumeItem{Owned business groups' remediation tracking with stakeholders and
+                   presented progress in review meetings.}
     \end{resumeItemList}
     \vspace{2pt}
 
@@ -167,17 +202,13 @@
     {Alice}{2026}
     {AI Red Team Researcher -- Freelance}{Remote}
     \begin{resumeItemList}
-      \resumeItem{Conducted \textbf{AI red-team and adversarial security testing using
-                   Alice}, developing attack scenarios to evaluate model behavior,
-                   prompt-injection resistance, guardrails, and security
-                   boundaries.}
+      \resumeItem{Conducted \textbf{AI red-team} and adversarial security testing using Alice,
+                   developing attack scenarios to evaluate model behaviour,
+                   prompt-injection resistance, guardrails and security boundaries.}
       \resumeItem{Built and iterated on \textbf{automated security-testing harnesses} for
                    adversarial prompt execution, response capture,
-                   reproducibility, and regression testing across attack
+                   reproducibility and regression testing across attack
                    scenarios.}
-      \resumeItem{Identified and validated \textbf{guardrail bypasses and unintended model
-                   behaviors}, documenting reproducible attack paths, security
-                   impact, and defensive improvements.}
       \resumeItem{Applied \textbf{prompt injection}, \textbf{instruction-hierarchy manipulation},
                    model steering and output-format coercion techniques to
                    probe LLM applications for jailbreaks, system-prompt leakage
@@ -189,50 +220,18 @@
     \vspace{2pt}
 
   \resumeSubheading
-    {HackerOne}{2025}
-    {Bug Bounty Hunter -- Freelance}{Remote}
-    \begin{resumeItemList}
-      \resumeItem{Hunted for web and API vulnerabilities in public \textbf{HackerOne}
-                   programs, focusing on access control, authentication, rate
-                   limiting and exposed staging infrastructure.}
-      \resumeItem{Reported \textbf{3} High vulnerabilities and \textbf{4} Medium vulnerabilities with auth, API and injection vulnerabilities, documenting reproduction steps, explaining security impact, and summarizing remediation recommendations.}
-      \resumeItem{Used \textbf{Burp Suite} for DAST and developed automated pipelines for SAST reconnaissance, request tampering and
-                   validation of findings, staying within program scope and
-                   disclosure rules.}
-      \resumeItem{Performed \textbf{CVE variant analysis}, studying the root causes of
-                   published CVEs across different vulnerability classes and
-                   hunting for variants of the same flaw patterns in in-scope
-                   targets.}
-    \end{resumeItemList}
-    \vspace{2pt}
-
-  \resumeSubheading
     {Hackup Technology}{Aug. 2025 -- Nov. 2025}
     {Cybersecurity Analyst Intern}{Coimbatore, Tamil Nadu}
     \begin{resumeItemList}
-      \resumeItem{Conducted hands-on web application security testing using
-                   \textbf{Burp Suite}, analyzing application behavior, identifying
-                   security weaknesses, and developing practical understanding of
-                   vulnerability discovery and validation.}
-      \resumeItem{Performed network traffic analysis using \textbf{Wireshark}, examining
-                   protocols, packet flows, and network communications to
-                   strengthen understanding of security monitoring and detection
-                   of anomalous activity.}
-      \resumeItem{Gained practical exposure to SOC operations, threat
-                   monitoring, vulnerability management, and security
-                   assessments, developing foundational experience in
-                   identifying, analyzing, and responding to security issues.}
-      \resumeItem{Delivered technical seminars across \textbf{3} colleges covering \textbf{Linux}
-                   fundamentals, command-line operations, and cybersecurity
-                   concepts, translating technical security topics into
-                   practical guidance for students.}
-      \resumeItem{Developed practical knowledge of web application
-                   vulnerabilities aligned with \textbf{PortSwigger Web Security
-                   Academy}, including SQL Injection, IDOR, API security flaws,
-                   NoSQL Injection, Reflected and Stored Cross-Site Scripting,
-                   Authentication and Access Control issues, and other
-                   OWASP-aligned vulnerabilities, with hands-on focus on
-                   exploitation, validation, and remediation techniques.}
+      \resumeItem{Tested web applications with \textbf{Burp Suite}, identifying and
+                   validating security weaknesses.}
+      \resumeItem{Analysed network traffic with \textbf{Wireshark}, examining protocols and
+                   packet flows to detect anomalous activity.}
+      \resumeItem{Delivered technical seminars at \textbf{3} colleges on \textbf{Linux} fundamentals,
+                   the command line and cybersecurity concepts.}
+      \resumeItem{Practised exploitation, validation and remediation of OWASP-aligned
+                   vulnerabilities through \textbf{PortSwigger Web Security Academy}, including
+                   SQLi, NoSQLi, IDOR, XSS, API flaws and authentication and access control issues.}
     \end{resumeItemList}
 \end{resumeSubHeadingList}
 
@@ -245,8 +244,8 @@
     {Award: Distinction}
 
   \resumeEducationHeading
-    {Anna University}{Aug. 2019 -- May 2023}
-    {Bachelor's in Mechatronics & Automation Engineering}{Chennai, Tamil Nadu}
+    {Anna University (Kumaraguru College of Technology)}{Aug. 2019 -- May 2023}
+    {Bachelor's Degree in Mechatronics \& Automation Engineering}{Chennai, Tamil Nadu}
     {GPA: 8.8}
 
   \resumeSubheading
@@ -258,22 +257,23 @@
 \section{Projects}
 \begin{resumeSubHeadingList}
 
-  \resumeProjectHeading{\textbf{arc-ai} -- PoC-generating security agent}{}
+  \resumeProjectHeading{\textbf{ProofTrace} -- Exploitability-first PR security review agent}{}
   \begin{resumeItemList}
-    \resumeItem{LangGraph + Temporal agent that finds vulnerabilities from
-                 source, proves each with a working exploit in an egress-locked
-                 sandbox and reports only verified findings; proves 3/3 planted
-                 vulnerabilities (SQLi, SSRF, IDOR) and discards unprovable
-                 hypotheses, for zero unverified alerts.}
+    \resumeItem{Uses \textbf{tree-sitter} to build a source-to-sink reachability graph of the
+                 changed code; a \textbf{LangGraph} investigator running on a local
+                 \textbf{Ollama} model reasons over it, and a \textbf{Docker} validator replays the
+                 exploit live before anything is reported; \textbf{Temporal} adds retries
+                 and fans out runs to measure cost-to-recall across models. Proves a
+                 planted BOLA (CWE-639) while clearing a same-shape safe endpoint.}
   \end{resumeItemList}
 
-  \resumeProjectHeading{\textbf{taintline} -- Static taint analyzer}{}
+  \resumeProjectHeading{\textbf{checkpoint-zero} -- Crash-recovery benchmark for agent workflows}{}
   \begin{resumeItemList}
-    \resumeItem{Go + tree-sitter analyzer tracing user input to SQL injection,
-                 command injection and path-traversal sinks in Python and
-                 JavaScript, with SARIF output for GitHub Code Scanning; detects
-                 9/9 seeded flaws with 0 false positives on safe twins, backed
-                 by 42 engine edge-case tests.}
+    \resumeItem{Runs the same security review job as a plain Python script,
+                 \textbf{LangGraph} with SQLite checkpoints and \textbf{Temporal}, then kills each
+                 with \texttt{kill -9}; per-node checkpoints lose 0 finished reviews, and
+                 Temporal with a 2\,s heartbeat recovers automatically in 2.0\,s versus
+                 19.5\,s without.}
   \end{resumeItemList}
 
   \resumeProjectHeading{\textbf{PPx} -- Prompt Pattern Index}{}
@@ -284,7 +284,7 @@
                  produces a risk score, severity rating and security report.}
   \end{resumeItemList}
 
-  \resumeProjectHeading{\textbf{Attack Surface Mapper}}{}
+  \resumeProjectHeading{\textbf{Attack Surface Mapper} -- Codebase attack surface discovery}{}
   \begin{resumeItemList}
     \resumeItem{Application-understanding engine that maps a codebase in 4
                  discovery stages (framework, routes, authentication, external
@@ -300,13 +300,13 @@
   \begin{resumeItemList}
     \resumeItem{\emph{Alice LLM Security} -- LLM-focused security research
                  through prompt injection, instruction-hierarchy manipulation,
-                 adversarial prompting, model steering, and output-format
+                 adversarial prompting, model steering and output-format
                  coercion while solving an AI security CTF. Awarded Best
                  Technical Write-up.
                  \link{https://medium.com/engineering-activefence/alice-in-wonderland-prompt-based-ctf-ai-security-challenge-b6af4b6de75e}{Read}}
     \resumeItem{\emph{QKD} -- Research on Quantum Key Distribution and its
                  cryptographic foundations, exploring quantum principles, secure
-                 key exchange, eavesdropping detection, and the role of QKD in
+                 key exchange, eavesdropping detection and the role of QKD in
                  post-quantum cybersecurity.
                  \link{https://medium.com/@suryaravi.in/qkd-quantum-key-distribution-cb1b954d52e8}{Read}}
   \end{resumeItemList}
@@ -315,12 +315,11 @@
 \section{Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Primary Skills}{: SOAR, Incident Response, MITRE ATT\&CK, Threat Intelligence, API Security, OWASP Top 10, Cryptography, Vulnerability Management, Python, C} \\
-        \textbf{Secondary Skills}{: Bash, Linux, Penetration Testing, Quantum Cryptography, Tree-sitter, CI/CD, LLM Security, Adversarial Testing, Relational and Non-relational database} \\
-        \textbf{Stack}{: Tines, Burp Suite, LangGraph, Postman, Git, GitHub, VS~Code and Docker} \\
+        \textbf{Primary Skills}{: SOAR, Incident Response, MITRE ATT\&CK, Threat Intelligence, Vulnerability Research \& Variant Analysis, API Security, OWASP Top 10, Cryptography, Vulnerability Management, Python, C} \\
+        \textbf{Secondary Skills}{: Bash, Linux, Penetration Testing, Quantum Cryptography, Tree-sitter, LangGraph, CI/CD, LLM Security, Adversarial Testing, Threat Modelling, Docker, Kubernetes, Relational and Non-relational Databases} \\
         \textbf{Certifications}{: GCPC, CrowdStrike Falcon Fusion SOAR, Tines Certified Professional, Postman API Developer Associate and LangGraph Foundations} \\
-        \textbf{Soft Skills}{: Problem-Solving, Fast-paced Learning and Cross-functional collaboration} \\
-        \textbf{Hobbies}{: Guitar, Surfing, solving Rubik's Cube \& Sudoku, Chess and Reading}
+        \textbf{Soft Skills}{: Problem-Solving, Fast-Paced Learning and Cross-Functional Collaboration} \\
+        \textbf{Hobbies}{: Playing guitar and chess, solving Rubik's Cube \& Sudoku}
         }}
 \end{itemize}
 
@@ -330,18 +329,20 @@
 \fontsize{8.5}{11}\selectfont
 \awardsTable{
   \awardsTableRow{Alice in Wonderland LLM CTF}{Top 5}{AI Security CTF}{Global}{Alice}{2026}
+  \awardsTableRow{Alice in Wonderland LLM CTF}{Best Technical Write-up}{AI Security CTF}{Global}{Alice}{2026}
   \awardsTableRow{Kriya CTF (Jeopardy)}{\ord{1}{st} Place}{Security CTF}{IN}{PSG Institute of Technology}{2020} \hline
   \awardsTableRow{IISF Hackathon}{\ord{1}{st} Place}{Hackathon}{Global}{Ministry of Sci. \& Tech.}{2020}
   \awardsTableRow{Robo Sumo}{\ord{1}{st} Place}{Robotics}{IN}{PSG Institute of Technology}{2021} \hline
-  \awardsTableRow{Outstanding Student Award}{Academic \& Inter-College Event Excellence}{Academic Award}{IN}{Anna University}{2023}
+  \awardsTableRow{\midcell{Outstanding Student Award}}{Academic \& Inter-College Event Excellence}{\midcell{Academic Award}}{\midcell{IN}}{\midcell{Anna University}}{\midcell{2023}}
   \awardsTableRow{Certificate of Recognition}{Academic Merit}{Academic Award}{IN}{Anna University}{2023}
   \awardsTableRow{Mahatma Gandhi Merit Scholarship}{Top 10\% of Institution}{Scholarship}{IN}{Anna University}{2019, 2020}
  }
 
-% Optional: uncomment if an employer asks for a declaration
-% \vspace{10pt}
-% \normalsize
-% \section{Declaration}
-% \small I, Surya Ravi, hereby confirm that the information given above is true to the best of my knowledge.
+\normalsize
+\section{Declaration}
+\small{I, Surya Ravi, hereby declare that the information furnished above is true,
+complete and accurate to the best of my knowledge and belief, and that the
+experience, projects and achievements listed are my own work and can be verified
+on request.}
 
 \end{document}
